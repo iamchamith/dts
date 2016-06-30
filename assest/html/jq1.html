@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+
+        let index = 0;
+        function some_function(arg1,callback) {
+ 
+            index = arg1;
+            for (var i = 0 ; i < 10; i++) {
+                setTimeout(stopTimer, 50000);
+            }
+ 
+            callback();
+           
+        }
+
+        function stopTimer() {
+            console.log(index);
+            index++;
+        }
+
+
+        some_function(10,function(){
+            alert('over');
+        });   
+    </script>
+</head>
+<body>
+
+    <button>Hide</button>
+    <input type='button' value='click me' onclick='alert("hi")' />
+    <p>This is a paragraph with little content.</p>
+
+</body>
+</html>
